@@ -2,8 +2,8 @@ util = require 'util'
 flatiron = require 'flatiron'
 app = flatiron.app
 Plates = require 'plates'
-html = '<div id="test">Old Value</div>'
-data = { "test": "Playing with Flatiron and plates examples in coffee" }
+html = '<div id="body"></div>'
+data = { "body": "Playing with Flatiron and plates examples in coffee" }
 
 output = Plates.bind(html, data)
 
@@ -12,6 +12,11 @@ app.use(flatiron.plugins.http)
 app.router.get('/', () ->
   this.res.writeHead(200, { 'Content-Type': 'text/html' })
   this.res.end(output)
+)
+
+app.router.get(/\/version/, () ->
+  this.res.writeHead(200, { 'Content-Type': 'text/plain' })
+  this.res.end('flatiron ' + flatiron.version)
 )
 
 app.router.post('/', () ->
