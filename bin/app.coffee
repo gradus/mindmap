@@ -2,6 +2,7 @@ util = require 'util'
 flatiron = require 'flatiron'
 app = flatiron.app
 Plates = require 'plates'
+html = '<span class="name">Name</span>'
 
 app.use(flatiron.plugins.http)
 
