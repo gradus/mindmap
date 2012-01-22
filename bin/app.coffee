@@ -3,12 +3,17 @@ flatiron = require 'flatiron'
 app = flatiron.app
 Plates = require 'plates'
 html = '<span class="name">Name</span>'
-
+colors = '<a href="/yellow"><div style="background-color:yellow;">yellow</div>
+          <a href="/yellow"><div style="background-color:green;">green</div>
+          <a href="/yellow"><div style="background-color:red;">red</div>
+          <a href="/yellow"><div style="background-color:orange;">orange</div>
+          <a href="/yellow"><div style="background-color:blue;">blue</div>
+'
 app.use(flatiron.plugins.http)
 
 app.router.get('/', () ->
   this.res.writeHead(200, { 'Content-Type': 'text/html' })
-  this.res.end('Playing with flatiron and nodejitsu')
+  this.res.end('Playing with flatiron and nodejitsu<br />' + colors)
 )
 
 app.router.get(/\/version/, () ->
