@@ -4,10 +4,10 @@ app = flatiron.app
 Plates = require 'plates'
 html = '<span class="name">Name</span>'
 colors = '<a href="/yellow"><div style="background-color:yellow;">yellow</div>
-          <a href="/yellow"><div style="background-color:green;">green</div>
-          <a href="/yellow"><div style="background-color:red;">red</div>
-          <a href="/yellow"><div style="background-color:orange;">orange</div>
-          <a href="/yellow"><div style="background-color:blue;">blue</div>
+          <a href="/green"><div style="background-color:green;">green</div>
+          <a href="/red"><div style="background-color:red;">red</div>
+          <a href="/orange"><div style="background-color:orange;">orange</div>
+          <a href="/blue"><div style="background-color:blue;">blue</div>
 '
 app.use(flatiron.plugins.http)
 
