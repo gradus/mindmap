@@ -2,21 +2,26 @@ util = require 'util'
 flatiron = require 'flatiron'
 app = flatiron.app
 Plates = require 'plates'
-html = '<div id="body"></div>'
-data = { "body": "Playing with Flatiron and plates examples in coffee" }
-
-output = Plates.bind(html, data)
 
 app.use(flatiron.plugins.http)
 
 app.router.get('/', () ->
   this.res.writeHead(200, { 'Content-Type': 'text/html' })
-  this.res.end(output)
+  this.res.end('Playing with flatiron and nodejitsu')
 )
 
 app.router.get(/\/version/, () ->
-  this.res.writeHead(200, { 'Content-Type': 'text/plain' })
+  this.res.writeHead(200, { 'Content-Type': 'text/html' })
   this.res.end('flatiron ' + flatiron.version)
+)
+
+app.router.get(':page', (page) ->
+  this.res.writeHead(200, { 'Content-Type': 'text/html' })
+  data = { "page": page }
+  map = Plates.Map()
+  map.class('name').to('page')
+  name = Plates.bind(html, data, map)
+  this.res.end(name)
 )
 
 app.router.post('/', () ->
@@ -33,5 +38,5 @@ app.router.get('/sandwich/:type', (type) ->
     this.res.writeHead(404, { 'Content-Type': 'text/html' })
     this.res.end('No such sandwich, sorry!\n')
 )
-app.start(8080)
+app.start(3000)
 
