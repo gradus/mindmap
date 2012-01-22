@@ -1,0 +1,18 @@
+{
+  "name": "mindmap",
+  "author": "Kris Windham",
+  "version": "0.0.1-6",
+  "scripts": {
+    "start": "./bin/server"
+  },
+  "engines": {
+    "node": "v0.6.x"
+  },
+  "dependencies": {
+    "flatiron": "*",
+    "union": "*",
+    "plates": "*"
+  },
+  "analyze": false,
+  "subdomain": "mindmap"
+}
