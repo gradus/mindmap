@@ -23,7 +23,7 @@ app.router.get(/\/version/, () ->
 
 app.router.get(':page', (page) ->
   this.res.writeHead(200, { 'Content-Type': 'text/html' })
-  data = { "page": page }
+  data = { "page": "<body style='background-color:" + page + "'>" + page }
   map = Plates.Map()
   map.class('name').to('page')
   name = Plates.bind(html, data, map)

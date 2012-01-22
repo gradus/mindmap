@@ -1,7 +1,7 @@
 {
   "name": "mindmap",
   "author": "Kris Windham",
-  "version": "0.0.1-11",
+  "version": "0.0.1-12",
   "scripts": {
     "start": "./bin/server"
   },
