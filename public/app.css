@@ -1,0 +1,159 @@
+body {
+  background-color: #ccc;
+  font-family: georgia;
+  color: #666;
+  margin: 10px 10px; 
+  padding: 0px;
+	text-align: center;
+}
+
+h2 {
+  color: #999;
+  font-size: 27px;
+  margin: 10px 0 0 20px;
+}
+
+h3 {
+  color: #999
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: #666
+}
+
+a:hover {
+  color: #ffA400;
+}
+
+#wrap {
+	width:600px;
+	margin:0px auto;
+	text-align:left;
+}
+
+#header {
+  background-color: seaShell;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 4px;
+  border-radius: 5px;
+}
+
+#content {
+  background-color: whitesmoke;
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  color: #171717;
+}
+
+#content ul {
+  list-style: none;
+}
+
+#content li {
+  display: inline;
+  padding: 0px 30px;
+  font-size: 18px;
+}
+
+#left img { margin: 10px; }
+
+#chat_input {margin-top:20px;}
+
+#messages {
+  display: none;
+  background-color: #cccfcc;
+  padding: 1px 6px;
+  color: #161616;
+ -moz-border-radius: 5px;
+ -webkit-border-radius: 5px;
+}
+
+#messages p{
+ color: #161616;
+ text-align: left;
+ margin-left: 4px;
+ background-color: seaShell;
+ padding: 5px 10px;
+ -moz-border-radius: 5px;
+ -webkit-border-radius: 5px;
+}
+
+#text_input{
+  width: 510px;
+  height: 25px;
+  font-size:20px;
+  color: #666;
+  margin: 10px 0;
+}
+
+#send_button {
+ color: #ffffff;
+ background-color:#ffA400;
+ border-width:1px;
+ border-style:solid;
+ border-bottom-color:#ff6200;
+ border-right-color:#f06400;
+ border-top-color:#f9FF05;
+ border-left-color:#f9FF09;
+ font-size:22px;
+ -moz-border-radius: 5px;
+ -webkit-border-radius: 5px;
+ }
+ 
+#send_button:hover {
+ background-color:#ffCC00;
+ cursor: pointer;
+}
+
+#chessboard {
+  margin-left: 30px;
+}
+
+img.chess_piece{
+  margin-left: 18px;
+}
+
+#chessboard table tr td.light{
+  width: 60px;
+  height: 60px;
+  background: url('../images/light_square.png')
+}
+
+#chessboard table tr td.dark{
+  width: 60px;
+  height: 60px;
+  background: url('../images/dark_square.png')
+}
+
+#footer {
+  background-color: seaShell;
+  width: 100%;
+  padding: 10px;
+  text-align: right;
+  margin-bottom: 4px;
+  border-radius: 5px;
+
+}
+
+#footer img {
+  float: left;
+}
+
+#left {
+  float: left;
+  padding-bottom: 10px;
+}
+
+#right {
+  padding: 10px;
+}
+
+#clear {
+  clear: both;
+}
+

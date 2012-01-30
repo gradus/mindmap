@@ -1,7 +1,7 @@
 {
   "name": "mindmap",
   "author": "Kris Windham",
-  "version": "0.0.1-12",
+  "version": "0.0.1-13",
   "scripts": {
     "start": "./bin/server"
   },
@@ -12,7 +12,9 @@
     "flatiron": "*",
     "union": "*",
     "plates": "*",
-    "colors": "*"
+    "colors": "*",
+    "ecstatic": "*",
+    "http-server": "0.2.x"
   },
   "analyze": false,
   "subdomain": "mindmap"
