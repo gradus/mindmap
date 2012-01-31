@@ -27,7 +27,7 @@ app.router.get(/\/version/, () ->
 app.router.get(':color', (color) ->
   response = this.res
   this.res.writeHead(200, { 'Content-Type': 'text/html' })
-  data = { "page": "<body style='background-color:" + color + "'>" + color }
+  data = { "page": "<body style='background-color:" + color + "'>"}
   map.class('name').to('page')
   name = Plates.bind(colorSpan, data, map)
   this.res.end(html + name)
