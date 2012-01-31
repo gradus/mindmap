@@ -19,7 +19,9 @@ h3 {
 
 a, a:visited {
   text-decoration: none;
-  color: #666
+  color: #171717
+  padding: 2px;
+  margin: 4px;
 }
 
 a:hover {
@@ -44,8 +46,8 @@ a:hover {
 #content {
   background-color: whitesmoke;
   width: 100%;
-  min-height: 600px;
-  padding: 10px;
+  height: 200px;
+  padding: 50px 10px;
   margin: 5px 0;
   border-radius: 5px;
   color: #171717;
