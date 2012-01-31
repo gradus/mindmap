@@ -21,13 +21,16 @@ a, a:visited {
   text-decoration: none;
   color: #171717
   padding: 2px;
-  margin: 4px;
+  margin: 100px;
 }
 
 a:hover {
   color: #ffA400;
 }
 
+.color_link {
+  margin: 4px;
+}
 #wrap {
 	width:600px;
 	margin:0px auto;
