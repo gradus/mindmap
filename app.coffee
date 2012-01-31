@@ -11,7 +11,13 @@ app.http.before = [
 ]
 
 Plates = require 'plates'
-html = '<span class="name">Name</span>'
+map = Plates.Map()
+html = ''
+layout = (filename, encoding) -> fs.readFile(filename, encoding, (error, data) ->
+  html = html + data
+)
+layout('./public/layout.html', 'utf8')
+colorSpan = '<span class="name">Name</span>'
 
 app.router.get(/\/version/, () ->
   this.res.writeHead(200, { 'Content-Type': 'text/html' })
@@ -22,16 +28,9 @@ app.router.get(':color', (color) ->
   response = this.res
   this.res.writeHead(200, { 'Content-Type': 'text/html' })
   data = { "page": "<body style='background-color:" + color + "'>" + color }
-  map = Plates.Map()
   map.class('name').to('page')
-  name = Plates.bind(html, data, map)
-  layout = (filename, encoding) -> fs.readFile(filename, encoding, (error, data) ->
-    @content = data
-    console.log @content
-  )
-
-
-  this.res.end(@content + name)
+  name = Plates.bind(colorSpan, data, map)
+  this.res.end(html + name)
 )
 app.start(3000)
 
