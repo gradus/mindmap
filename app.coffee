@@ -16,7 +16,7 @@ html = ''
 layout = (filename, encoding) -> fs.readFile(filename, encoding, (error, data) ->
   html = html + data
 )
-layout('./public/index.html', 'utf8')
+header = layout('./public/index.html', 'utf8')
 colorSpan = '<span class="name">Name</span>'
 
 app.router.get(/\/version/, () ->
